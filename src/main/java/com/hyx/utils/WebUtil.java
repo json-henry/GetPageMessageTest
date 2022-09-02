@@ -132,6 +132,9 @@ public class WebUtil {
         List<WebElement> elementList = new ArrayList<>(1000);
 
         int sum = WebUtil.getPageSize(url);
+        if (sum<=0){
+            return null;
+        }
 
         for (int i = 1; i <= sum; i++) {
             Document page;
